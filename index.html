@@ -1,32 +1,26 @@
-<html><head>
- <style>
- #gorselonizleme{
-background-repeat: no-repeat;
-    width: auto;
-    min-height: 540px;
-    background-size: contain;
-}</style>
-</head>
-<body>
-
-<input type="file" name="resim" id="resimsec">
-
-<div id="gorselonizleme"></div>
-<script>
-function readURL(input){
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('#gorselonizleme').css({'background-image':'url(' + e.target.result + ')'}); 
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-} 
-$("#resimsec").change(function () {
-    readURL(this);
-});
-
-</script>
-
-
-</body></html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Social Media Post Preview - Emre Özden</title>
+  <script src="jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+  <input type="file" name="resim" id="postSec">
+  <div id="goster"></div>
+  <script>
+  function readURL(input){
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+              $('#goster').css({'background-image':'url(' + e.target.result + ')'}); 
+          }
+          reader.readAsDataURL(input.files[0]);
+      }
+  } 
+  $("#postSec").change(function () {
+      readURL(this);
+  });
+  </script>
+ </body>
+</html>
