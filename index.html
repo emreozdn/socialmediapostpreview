@@ -2,25 +2,38 @@
  <head>
   <meta charset="utf-8">
   <title>Social Media Post Preview - Emre Özden</title>
-  <script src="/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/style.css" />
+  
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
  </head>
  <body>
-  <input type="file" name="resim" id="postSec">
-  <div id="goster"></div>
-  <script>
-  function postGetir(input){
-      if (input.files && input.files[0]) {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-              $('#goster').css({'background-image':'url(' + e.target.result + ')'}); 
-          }
-          reader.readAsDataURL(input.files[0]);
-      }
-  } 
-  $("#postSec").change(function () {
-      postGetir(this);
-  });
-  </script>
+<!--HEADER-->
+	<div class="header">
+	  <h1>Social Media Post Preview</h1>
+	  <p>Sosyal Medya Paylaşımları Önizleme Uygulaması</p>
+	</div>
+<!--HEADER-->
+<!--MENÜ-->
+	<ul class="menu_ul">
+	  <li class="menu_li"><a class="active" href="index.html">Home</a></li>
+	  <li class="menu_li"><a href="facebook.html">Facebook</a></li>
+	  <li class="menu_li"><a href="twitter.html">Twitter</a></li>
+	  <li class="menu_li"><a href="instagram.html">Instagram</a></li>
+	</ul>
+<!--MENÜ-->
+<!--İÇERİK-->
+	<div class="icerik">
+		<h3>Social Media Post Preview</h3>
+		<p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>
+		<p><strong>Note:</strong> Internet Explorer do not support sticky positioning and Safari requires a -webkit- prefix.</p>
+		<p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		
+		<input type="file" name="resim" id="postSec" />
+  
+		<div id="goster"></div>
+	</div>
+<!--İÇERİK--> 
+  <script src="js/scripts.js" crossorigin="anonymous"></script>
  </body>
 </html>
